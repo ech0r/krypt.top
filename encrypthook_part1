@@ -1,0 +1,30 @@
+#!/usr/bin/sh
+
+################ NOTES###############################################################################                                                     #
+# Install this script at /etc/initcpio/hooks/encrypthook, YMMV on distributions other than Manjaro. #             
+# Modify the placeholders below with the information from your machine.                             #
+# Where XXXX is the device ID of our usb key we found in the beginning of Part V.                   #
+# Where YYYY is the device ID of our internal/main drive we found in the beginning of Part V.       #
+# Where N is the offset we chose in Part IV step 2,3.                                               #  
+# Where main is the name of the encrypted container we chose at Part IV step 3.                     #  
+#####################################################################################################
+
+run_hook() {
+	
+	modprobe -a -q dm-crypt >/dev/null 2>&1
+	modprobe loop
+	[ "${quiet}" = "y" ] && CSQUIET=">/dev/null"
+	
+	while [ ! -L '/dev/disk/by-id/XXXX-part2' ]; do
+		echo 'Waiting for USB key'
+		sleep 3	
+	done
+	
+	cryptsetup open /dev/disk/by-id/XXXX-part2 cryptboot
+	mkdir -p /mnt
+	mount /dev/mapper/cryptboot /mnt
+	cryptsetup open /mnt/key.img lukskey
+	cryptsetup --header /mnt/header.img --key-file=/dev/mapper/lukskey --keyfile-offset=N --keyfile-size=8192 open /dev/disk/by-id/YYYY main
+	cryptsetup close lukskey
+	umount /mnt
+}
