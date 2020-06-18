@@ -1,4 +1,4 @@
-# KryptTop
+# krypt.top
 
 Encrypted laptop setup built on the Manjaro distribution
 
