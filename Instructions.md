@@ -24,7 +24,7 @@
 
 ### INTRODUCTION:
 
-This is a true full disk encryption scheme designed to keep your data safe and by default provides some assurance that your system is in a trustworthy state each time you use it. This setup combines physical MFA (the usb key) combined with the passphrases used to encrypt it. The usb key in this setup functions like the 'key' to your computer, in the same way a car requires a key to start. The usb key is required to boot the machine. Without this key, the data on the internal drive is inaccessible. This setup will give you security similar to the 'smartcard' setup found on high-security enterprise and government systems.
+This is a true full disk encryption scheme designed to keep your data safe and by default provides some assurance that your system is in a trustworthy state each time you use it. This setup combines physical MFA (the usb key) combined with the passphrases used to encrypt it. The usb key in this setup functions like the 'key' to your computer, in the same way a car requires a key to start. The usb key is required to boot the machine. Without this key, the data on the internal drive is inaccessible. This setup will give you security similar to the 'smart card' setup found on high-security enterprise and government systems.
 
 Some definitions:
 
