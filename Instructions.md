@@ -33,7 +33,7 @@ Some definitions:
 #### 1. Why would you want this setup? 
 	- This is the most secure data-at-rest encryption scheme I can think of. 
 	- Digital Privacy is something that is under constant threat - why make it easier for the powers that be?
-	- To someone viewing the contents of your internal drive, it would appear unused, nothing indicates that an encrypted volume even exists on the disk.
+	- To someone viewing the contents of your internal drive while powered off, it would appear unused, nothing indicates that an encrypted volume even exists on the disk.
 
 #### 2. Who would want this setup?
 	- Political dissidents (e.g. protesters, whistleblowers)
