@@ -10,7 +10,7 @@
 
 #### LUKS - Linux Unified Key Setup - a robust disk encryption specification for Linux, platform independent standard.  
 
-#### U/EFI - (Unified) Extensible Firmware Interface - replacement for BIOS, this is how modern machines boot. UEFI and EFI are used interchangably.
+#### U/EFI - (Unified) Extensible Firmware Interface - replacement for BIOS, this is how modern machines boot. UEFI and EFI are used interchangeably.
 
 #### MFA - Multi-Factor Authentication - a paradigm of using multiple methods to ensure the right person has access to whatever they're accessing.
 
